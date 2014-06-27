@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="8gT-lY-Lcn">
             <objects>
-                <viewController id="axf-KS-FAr" sceneMemberID="viewController">
+                <viewController id="axf-KS-FAr" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y0T-g0-wqS"/>
                         <viewControllerLayoutGuide type="bottom" id="LAx-u9-ved"/>
@@ -17,16 +17,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cyq-Vc-Kke">
-                                <rect key="frame" x="137" y="209" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                                <rect key="frame" x="46" y="225" width="75" height="30"/>
+                                <state key="normal" title="Show Alert">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="showAlert:" destination="axf-KS-FAr" eventType="touchUpInside" id="yZh-Xc-LXg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptk-pT-gs6">
+                                <rect key="frame" x="147" y="225" width="127" height="30"/>
+                                <state key="normal" title="Show ActionSheet">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showActionSheet:" destination="axf-KS-FAr" eventType="touchUpInside" id="08h-gw-gFj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Cyq-Vc-Kke" firstAttribute="centerX" secondItem="dHD-iy-6pZ" secondAttribute="centerX" id="I9K-1o-ddG"/>
-                            <constraint firstItem="Cyq-Vc-Kke" firstAttribute="top" secondItem="y0T-g0-wqS" secondAttribute="bottom" constant="189" id="eK2-sM-bad"/>
+                            <constraint firstItem="ptk-pT-gs6" firstAttribute="leading" secondItem="Cyq-Vc-Kke" secondAttribute="trailing" constant="26" id="84E-aZ-GBY"/>
+                            <constraint firstItem="ptk-pT-gs6" firstAttribute="centerY" secondItem="dHD-iy-6pZ" secondAttribute="centerY" id="A3z-yK-ubr"/>
+                            <constraint firstItem="Cyq-Vc-Kke" firstAttribute="leading" secondItem="dHD-iy-6pZ" secondAttribute="leading" constant="46" id="UAZ-Dc-rIA"/>
+                            <constraint firstItem="Cyq-Vc-Kke" firstAttribute="baseline" secondItem="ptk-pT-gs6" secondAttribute="baseline" id="cEb-YX-BYK"/>
                         </constraints>
                     </view>
                 </viewController>
